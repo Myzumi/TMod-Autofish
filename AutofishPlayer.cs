@@ -47,7 +47,7 @@ namespace Autofish
                     Player.controlUseItem = true;
                     Player.releaseUseItem = true;
                     ActivatedByMod = true;
-                    Player.ItemCheck(Player.whoAmI);
+                    Player.ItemCheck();
                 }
             }
 
@@ -70,7 +70,7 @@ namespace Autofish
                 Player.controlUseItem = true;
                 Player.releaseUseItem = true;
                 ActivatedByMod = true;
-                Player.ItemCheck(Player.whoAmI);
+                Player.ItemCheck();
                 AutocastDelay = 10;
 
                 if (Lockcast) { Main.mouseX = mouseX; Main.mouseY = mouseY; }
@@ -84,17 +84,17 @@ namespace Autofish
             return false;
         }
 
-        public override void OnEnterWorld(Player player) {
+        public override void OnEnterWorld() {
             Lockcast = false;
             CastPosition = default;
             Autocast = false;
-            base.OnEnterWorld(player);
+            base.OnEnterWorld();
         }
 
         public override void Load() {
-            On.Terraria.Player.ItemCheck_CheckFishingBobbers += Player_ItemCheck_CheckFishingBobbers;
-            On.Terraria.Player.ItemCheck_Shoot += Player_ItemCheck_Shoot;
-            IL.Terraria.Projectile.FishingCheck += Projectile_FishingCheck;
+            Terraria.On_Player.ItemCheck_CheckFishingBobbers += Player_ItemCheck_CheckFishingBobbers;
+            Terraria.On_Player.ItemCheck_Shoot += Player_ItemCheck_Shoot;
+            Terraria.IL_Projectile.FishingCheck += Projectile_FishingCheck;
             base.Load();
         }
 
@@ -102,7 +102,7 @@ namespace Autofish
             Configuration = null;
         }
 
-        private bool Player_ItemCheck_CheckFishingBobbers(On.Terraria.Player.orig_ItemCheck_CheckFishingBobbers orig, Player player, bool canUse) {
+        private bool Player_ItemCheck_CheckFishingBobbers(Terraria.On_Player.orig_ItemCheck_CheckFishingBobbers orig, Player player, bool canUse) {
             // 只有当执行收杆动作，且是玩家执行的时，才会关闭效果
             // 只有whoAmI=myPlayer才会执行这里，所以不需要判断
             bool flag = orig.Invoke(player, canUse); // 返回值若为false，则是拉杆
@@ -113,7 +113,7 @@ namespace Autofish
         }
 
         // 注意：收杆根本不会执行这个方法
-        private void Player_ItemCheck_Shoot(On.Terraria.Player.orig_ItemCheck_Shoot orig, Player player, int i, Item sItem, int weaponDamage) {
+        private void Player_ItemCheck_Shoot(Terraria.On_Player.orig_ItemCheck_Shoot orig, Player player, int i, Item sItem, int weaponDamage) {
             // 只有当执行抛竿动作，且是玩家执行的时，才会开启效果
             if (player.whoAmI == Main.myPlayer && player.TryGetModPlayer(out AutofishPlayer modPlayer) && !modPlayer.ActivatedByMod && sItem.fishingPole > 0) {
                 modPlayer.Autocast = true;

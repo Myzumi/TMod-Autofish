@@ -1,7 +1,13 @@
-﻿This mod can help you fish automatically. Which means auto pull and cast bobbers while holding a fishing pole.
+﻿I only updated this mod to the latest 1.4.4 Version, i did not programm this mod, the original author is Cyrilly
+I am able to put this mod off the workshop/Mod Browser if requested by the original Mod Author.
+
+Original Description:
+
+This mod can help you fish automatically. Which means auto pull and cast bobbers while holding a fishing pole.
 Auto Casting mode will automatically turn on when you are fishing and turn off when you stop fishing.
 
-You can see this mod's source code here: https://github.com/Crapsky233/Autofish
+Edited Source Code: https://github.com/Myzumi/TMod-Autofish
+Original Source Code: https://github.com/Crapsky233/Autofish
 
 Configuration:
 Auto Pull: The line will be auto pulled and the filters will be useful if enabled
@@ -20,6 +26,7 @@ Utilities:
 [i:2356] Auto Crate Potion
 Hotkeys:
 Lock Casting Target To Cursor: Lock the casting target to cursor. Bobbers will be casted to a locked position wherever the cursor at. Only useful when activating Auto Cast Fishing Pole.
+
 
 这个模组可以让你自动钓鱼。当拿着钓鱼竿时自动抛/收鱼线。
 自动抛竿模式会当你钓鱼时自动打开，在你停止钓鱼时自动关闭。

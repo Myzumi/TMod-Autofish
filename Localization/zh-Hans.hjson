@@ -1,38 +1,47 @@
-﻿Mods: {
+Mods: {
 	Autofish: {
 		Config: {
 			Label: 自动钓鱼配置面板
+
 			AutoCatch: {
-				Label: "自动拉线"
+				Label: 自动拉线
 				Tooltip: 只有当你启动该项时才会自动拉鱼线，过滤器选项才会有用
 			}
+
 			PullingDelay: {
 				Label: 拉鱼线延迟（秒）
 				Tooltip: 设置检测到鱼后拉浮标的延迟时间
 			}
-			Filters: "过滤器选项[c/DD2222:（仅在获得声纳Buff时可用！）]"
+
+			Filters: 过滤器选项[c/DD2222:（仅在获得声纳Buff时可用！）]
 			CatchCrates: "[i:2356] 自动钓宝匣"
 			CatchAccessories: "[i:2423] 自动钓饰品"
 			CatchTools: "[i:2341] 自动钓工具和武器"
 			CatchQuestFishes: "[i:2487] 自动钓任务鱼"
+
 			CatchWhiteRarityCatches: {
 				Label: "[i:2290] 自动钓白/灰色稀有度一般渔获"
 				Tooltip: 如果启用，你将捕捉到稀有度为白色或灰色的渔获
 			}
+
 			CatchNormalCatches: {
 				Label: "[i:2308] 自动钓高稀有度一般渔获"
 				Tooltip: 如果启用，你将捕捉到稀有度高于白色（不包括白色）的渔获
 			}
+
 			CatchEnemies: "[i:4271] 自动钓血月怪物"
+
 			OtherCatches: {
 				Label: "[i:2676] 其他自动捕捉物品"
 				Tooltip: 相应渔获将被捕捉
 			}
+
 			Blacklist: {
 				Label: "[i:5064] 渔获黑名单"
 				Tooltip: 相应渔获将不会被捕捉
 			}
-			Utilities: 
+
+			Utilities:
 				'''
 				功能
 				在你喝下一次药水后，如果物品栏内有相应药水会自动补上
@@ -42,10 +51,89 @@
 			AutoFishing: "[i:2354] 自动喝钓鱼药水"
 			AutoCrate: "[i:2356] 自动喝宝匣药水"
 		}
+
 		Tips: {
-			TargetLock: "抛竿目标点已[c/22CC22:锁定]至当前鼠标位置"
-			TargetUnlock: "抛竿目标点[c/BB2222:不再锁定]"
-			PotionsRanOut: "已用光{0}"
+			TargetLock: 抛竿目标点已[c/22CC22:锁定]至当前鼠标位置
+			TargetUnlock: 抛竿目标点[c/BB2222:不再锁定]
+			PotionsRanOut: 已用光{0}
+		}
+
+		// "Keybinds.Lock Casting Target To Cursor.DisplayName": Lock  Casting  Target  To  Cursor
+
+		Configs: {
+			Configuration: {
+				// DisplayName: "{$Mods.Autofish.Config.Label}"
+
+				AutoCatch: {
+					// Label: "{$Mods.Autofish.Config.AutoCatch.Label}"
+					// Tooltip: "{$Mods.Autofish.Config.AutoCatch.Tooltip}"
+				}
+
+				PullingDelay: {
+					// Label: "{$Mods.Autofish.Config.PullingDelay.Label}"
+					// Tooltip: "{$Mods.Autofish.Config.PullingDelay.Tooltip}"
+				}
+
+				CatchCrates: {
+					// Label: "{$Mods.Autofish.Config.CatchCrates}"
+					// Tooltip: ""
+				}
+
+				CatchAccessories: {
+					// Label: "{$Mods.Autofish.Config.CatchAccessories}"
+					// Tooltip: ""
+				}
+
+				CatchTools: {
+					// Label: "{$Mods.Autofish.Config.CatchTools}"
+					// Tooltip: ""
+				}
+
+				CatchQuestFishes: {
+					// Label: "{$Mods.Autofish.Config.CatchQuestFishes}"
+					// Tooltip: ""
+				}
+
+				CatchWhiteRarityCatches: {
+					// Label: "{$Mods.Autofish.Config.CatchWhiteRarityCatches.Label}"
+					// Tooltip: "{$Mods.Autofish.Config.CatchWhiteRarityCatches.Tooltip}"
+				}
+
+				CatchNormalCatches: {
+					// Label: "{$Mods.Autofish.Config.CatchNormalCatches.Label}"
+					// Tooltip: "{$Mods.Autofish.Config.CatchNormalCatches.Tooltip}"
+				}
+
+				CatchEnemies: {
+					// Label: "{$Mods.Autofish.Config.CatchEnemies}"
+					// Tooltip: ""
+				}
+
+				OtherCatches: {
+					// Label: "{$Mods.Autofish.Config.OtherCatches.Label}"
+					// Tooltip: "{$Mods.Autofish.Config.OtherCatches.Tooltip}"
+				}
+
+				Blacklist: {
+					// Label: "{$Mods.Autofish.Config.Blacklist.Label}"
+					// Tooltip: "{$Mods.Autofish.Config.Blacklist.Tooltip}"
+				}
+
+				AutoSonar: {
+					// Label: "{$Mods.Autofish.Config.AutoSonar}"
+					// Tooltip: ""
+				}
+
+				AutoFishing: {
+					// Label: "{$Mods.Autofish.Config.AutoFishing}"
+					// Tooltip: ""
+				}
+
+				AutoCrate: {
+					// Label: "{$Mods.Autofish.Config.AutoCrate}"
+					// Tooltip: ""
+				}
+			}
 		}
 	}
 }

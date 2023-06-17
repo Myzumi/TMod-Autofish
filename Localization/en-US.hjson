@@ -2,37 +2,46 @@ Mods: {
 	Autofish: {
 		Config: {
 			Label: Autofish Configuration
+
 			AutoCatch: {
-				Label: "Auto Pull"
+				Label: Auto Pull
 				Tooltip: The line will be auto pulled and the filters will be useful if enabled
 			}
+
 			PullingDelay: {
 				Label: Auto Catch Pulling Delay (Seconds)
 				Tooltip: The delay of pulling bobber up after detecting available fish
 			}
-			Filters: "Filters [c/DD2222:(only available when Sonar Buff activated!)]"
+
+			Filters: Filters [c/DD2222:(only available when Sonar Buff activated!)]
 			CatchCrates: "[i:2356] Auto Catch Crates"
 			CatchAccessories: "[i:2423] Auto Catch Accessories"
 			CatchTools: "[i:2341] Auto Catch Tools and Weapons"
 			CatchQuestFishes: "[i:2487] Auto Catch Quest Fishes"
+
 			CatchWhiteRarityCatches: {
 				Label: "[i:2290] Auto Catch White/Grey Rarity Normal Catches"
 				Tooltip: If enabled, you will catch catches with a white or gray rarity
 			}
+
 			CatchNormalCatches: {
 				Label: "[i:2308] Auto Catch High Rarity Normal Catches"
 				Tooltip: If enabled, you will catch normal catches with rarity higher than white (not including white)
 			}
+
 			CatchEnemies: "[i:4271] Auto Catch All Bloodmoon Enemies"
+
 			OtherCatches: {
 				Label: "[i:2676] Other catches"
 				Tooltip: These catches will also be caught
 			}
+
 			Blacklist: {
 				Label: "[i:5064] Blacklist"
 				Tooltip: These catches will not be caught
 			}
-			Utilities: 
+
+			Utilities:
 				'''
 				Utilities
 				After you drink a potion, if there is a corresponding potion in the inventory will automatically re-drink.
@@ -42,10 +51,89 @@ Mods: {
 			AutoFishing: "[i:2354] Auto Fishing Potion"
 			AutoCrate: "[i:2356] Auto Crate Potion"
 		}
+
 		Tips: {
-			TargetLock: "Casting target are now [c/22CC22:locked] to current cursor position."
-			TargetUnlock: "Casting target are now [c/BB2222:unlocked]."
-			PotionsRanOut: "Already ran out of {0}."
+			TargetLock: Casting target are now [c/22CC22:locked] to current cursor position.
+			TargetUnlock: Casting target are now [c/BB2222:unlocked].
+			PotionsRanOut: Already ran out of {0}.
+		}
+
+		"Keybinds.Lock Casting Target To Cursor.DisplayName": Lock  Casting  Target  To  Cursor
+
+		Configs: {
+			Configuration: {
+				DisplayName: "{$Mods.Autofish.Config.Label}"
+
+				AutoCatch: {
+					Label: "{$Mods.Autofish.Config.AutoCatch.Label}"
+					Tooltip: "{$Mods.Autofish.Config.AutoCatch.Tooltip}"
+				}
+
+				PullingDelay: {
+					Label: "{$Mods.Autofish.Config.PullingDelay.Label}"
+					Tooltip: "{$Mods.Autofish.Config.PullingDelay.Tooltip}"
+				}
+
+				CatchCrates: {
+					Label: "{$Mods.Autofish.Config.CatchCrates}"
+					Tooltip: ""
+				}
+
+				CatchAccessories: {
+					Label: "{$Mods.Autofish.Config.CatchAccessories}"
+					Tooltip: ""
+				}
+
+				CatchTools: {
+					Label: "{$Mods.Autofish.Config.CatchTools}"
+					Tooltip: ""
+				}
+
+				CatchQuestFishes: {
+					Label: "{$Mods.Autofish.Config.CatchQuestFishes}"
+					Tooltip: ""
+				}
+
+				CatchWhiteRarityCatches: {
+					Label: "{$Mods.Autofish.Config.CatchWhiteRarityCatches.Label}"
+					Tooltip: "{$Mods.Autofish.Config.CatchWhiteRarityCatches.Tooltip}"
+				}
+
+				CatchNormalCatches: {
+					Label: "{$Mods.Autofish.Config.CatchNormalCatches.Label}"
+					Tooltip: "{$Mods.Autofish.Config.CatchNormalCatches.Tooltip}"
+				}
+
+				CatchEnemies: {
+					Label: "{$Mods.Autofish.Config.CatchEnemies}"
+					Tooltip: ""
+				}
+
+				OtherCatches: {
+					Label: "{$Mods.Autofish.Config.OtherCatches.Label}"
+					Tooltip: "{$Mods.Autofish.Config.OtherCatches.Tooltip}"
+				}
+
+				Blacklist: {
+					Label: "{$Mods.Autofish.Config.Blacklist.Label}"
+					Tooltip: "{$Mods.Autofish.Config.Blacklist.Tooltip}"
+				}
+
+				AutoSonar: {
+					Label: "{$Mods.Autofish.Config.AutoSonar}"
+					Tooltip: ""
+				}
+
+				AutoFishing: {
+					Label: "{$Mods.Autofish.Config.AutoFishing}"
+					Tooltip: ""
+				}
+
+				AutoCrate: {
+					Label: "{$Mods.Autofish.Config.AutoCrate}"
+					Tooltip: ""
+				}
+			}
 		}
 	}
 }
